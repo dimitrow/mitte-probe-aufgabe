@@ -11,9 +11,17 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        view.backgroundColor = .red
+        
+        if let url = RiverLisAPI.baseURL {
+            
+            RiverListFetchService().fetchRiverList(endPoint: url, type: RiverModel.self) { result in
+                
+                print(result)
+                
+            }
+        }
     }
-
-
 }
 

@@ -10,9 +10,14 @@
 		B0E03E4826D27C110051F70A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E03E4726D27C110051F70A /* AppDelegate.swift */; };
 		B0E03E4A26D27C110051F70A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E03E4926D27C110051F70A /* SceneDelegate.swift */; };
 		B0E03E4C26D27C110051F70A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E03E4B26D27C110051F70A /* ViewController.swift */; };
-		B0E03E4F26D27C110051F70A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0E03E4D26D27C110051F70A /* Main.storyboard */; };
 		B0E03E5126D27C130051F70A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0E03E5026D27C130051F70A /* Assets.xcassets */; };
 		B0E03E5426D27C130051F70A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0E03E5226D27C130051F70A /* LaunchScreen.storyboard */; };
+		B0E03E5F26D28E7C0051F70A /* RiverModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E03E5E26D28E7C0051F70A /* RiverModel.swift */; };
+		B0E03E6126D2901D0051F70A /* RiverLengthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E03E6026D2901D0051F70A /* RiverLengthModel.swift */; };
+		B0E03E6326D290A90051F70A /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E03E6226D290A90051F70A /* APIManager.swift */; };
+		B0E03E6526D293120051F70A /* RiverListFetchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E03E6426D293120051F70A /* RiverListFetchService.swift */; };
+		B0E03E6726D2A2A10051F70A /* APIHeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E03E6626D2A2A10051F70A /* APIHeaders.swift */; };
+		B0E03E6A26D2AB4E0051F70A /* ErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E03E6926D2AB4E0051F70A /* ErrorHandling.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,10 +25,15 @@
 		B0E03E4726D27C110051F70A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B0E03E4926D27C110051F70A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B0E03E4B26D27C110051F70A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B0E03E4E26D27C110051F70A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B0E03E5026D27C130051F70A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B0E03E5326D27C130051F70A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B0E03E5526D27C130051F70A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0E03E5E26D28E7C0051F70A /* RiverModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiverModel.swift; sourceTree = "<group>"; };
+		B0E03E6026D2901D0051F70A /* RiverLengthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiverLengthModel.swift; sourceTree = "<group>"; };
+		B0E03E6226D290A90051F70A /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		B0E03E6426D293120051F70A /* RiverListFetchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiverListFetchService.swift; sourceTree = "<group>"; };
+		B0E03E6626D2A2A10051F70A /* APIHeaders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHeaders.swift; sourceTree = "<group>"; };
+		B0E03E6926D2AB4E0051F70A /* ErrorHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandling.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +66,52 @@
 		B0E03E4626D27C110051F70A /* mitte aufgabe */ = {
 			isa = PBXGroup;
 			children = (
+				B0E03E6826D2AB3A0051F70A /* Extensions */,
+				B0E03E5D26D28BF70051F70A /* Models */,
+				B0E03E5C26D28BEC0051F70A /* Network */,
+				B0E03E5B26D28BE00051F70A /* RiverListScene */,
 				B0E03E4726D27C110051F70A /* AppDelegate.swift */,
 				B0E03E4926D27C110051F70A /* SceneDelegate.swift */,
 				B0E03E4B26D27C110051F70A /* ViewController.swift */,
-				B0E03E4D26D27C110051F70A /* Main.storyboard */,
 				B0E03E5026D27C130051F70A /* Assets.xcassets */,
 				B0E03E5226D27C130051F70A /* LaunchScreen.storyboard */,
 				B0E03E5526D27C130051F70A /* Info.plist */,
 			);
 			path = "mitte aufgabe";
+			sourceTree = "<group>";
+		};
+		B0E03E5B26D28BE00051F70A /* RiverListScene */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RiverListScene;
+			sourceTree = "<group>";
+		};
+		B0E03E5C26D28BEC0051F70A /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				B0E03E6626D2A2A10051F70A /* APIHeaders.swift */,
+				B0E03E6226D290A90051F70A /* APIManager.swift */,
+				B0E03E6426D293120051F70A /* RiverListFetchService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		B0E03E5D26D28BF70051F70A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B0E03E5E26D28E7C0051F70A /* RiverModel.swift */,
+				B0E03E6026D2901D0051F70A /* RiverLengthModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B0E03E6826D2AB3A0051F70A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B0E03E6926D2AB4E0051F70A /* ErrorHandling.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,7 +173,6 @@
 			files = (
 				B0E03E5426D27C130051F70A /* LaunchScreen.storyboard in Resources */,
 				B0E03E5126D27C130051F70A /* Assets.xcassets in Resources */,
-				B0E03E4F26D27C110051F70A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +183,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0E03E6A26D2AB4E0051F70A /* ErrorHandling.swift in Sources */,
+				B0E03E6326D290A90051F70A /* APIManager.swift in Sources */,
+				B0E03E6726D2A2A10051F70A /* APIHeaders.swift in Sources */,
+				B0E03E5F26D28E7C0051F70A /* RiverModel.swift in Sources */,
+				B0E03E6126D2901D0051F70A /* RiverLengthModel.swift in Sources */,
 				B0E03E4C26D27C110051F70A /* ViewController.swift in Sources */,
 				B0E03E4826D27C110051F70A /* AppDelegate.swift in Sources */,
+				B0E03E6526D293120051F70A /* RiverListFetchService.swift in Sources */,
 				B0E03E4A26D27C110051F70A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -146,14 +198,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B0E03E4D26D27C110051F70A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B0E03E4E26D27C110051F70A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B0E03E5226D27C130051F70A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -296,7 +340,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "RockyTurtle.mitte-aufgabe";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -315,7 +359,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "RockyTurtle.mitte-aufgabe";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
