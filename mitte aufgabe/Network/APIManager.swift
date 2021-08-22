@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct RiverLisAPI {
+struct RiverListAPI {
         
     static var baseURL: URL? {
 

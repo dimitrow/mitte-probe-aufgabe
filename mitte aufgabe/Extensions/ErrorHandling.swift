@@ -9,6 +9,5 @@ import Foundation
 
 enum NetworkError: Error {
     
-    case missedData
     case customDescriptionError(_ description: String)
 }

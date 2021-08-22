@@ -15,8 +15,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
 
         guard let entireScene = (scene as? UIWindowScene) else { return }
-                
-        let startPointNavigationController = UINavigationController(rootViewController: ViewController())
+           
+        let riverListViewController: RiverListViewController = RiverListCoordinator().initScene()
+        let startPointNavigationController = UINavigationController(rootViewController: riverListViewController)
         
         window = UIWindow(frame: entireScene.coordinateSpace.bounds)
         window?.windowScene = entireScene

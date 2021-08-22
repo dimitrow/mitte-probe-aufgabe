@@ -1,5 +1,5 @@
 //
-//  RiverListFetchService.swift
+//  DataProvider.swift
 //  mitte aufgabe
 //
 //  Created by Gene Dimitrow on 22.08.21.
@@ -7,9 +7,9 @@
 
 import Foundation
 
-class RiverListFetchService: APIHeader {
+class DataProvider: APIHeader {
 
-    func fetchRiverList<T: Decodable>(endPoint: URL, type: T.Type, completion: @escaping (Result <Array<T>, Error>) -> Void) {
+    func fetchData<T: Decodable>(endPoint: URL, type: T.Type, completion: @escaping (Result <Array<T>, Error>) -> Void) {
         
         var urlRequest = URLRequest(url: endPoint)
         urlRequest.httpMethod = "GET"
