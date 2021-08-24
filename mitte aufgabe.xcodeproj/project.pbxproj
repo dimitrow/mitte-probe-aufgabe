@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B012776526D4EBEE00DE6898 /* ErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B012776426D4EBEE00DE6898 /* ErrorModel.swift */; };
 		B0E03E4826D27C110051F70A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E03E4726D27C110051F70A /* AppDelegate.swift */; };
 		B0E03E4A26D27C110051F70A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E03E4926D27C110051F70A /* SceneDelegate.swift */; };
 		B0E03E4C26D27C110051F70A /* RiverListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E03E4B26D27C110051F70A /* RiverListViewController.swift */; };
@@ -18,14 +19,20 @@
 		B0E03E6526D293120051F70A /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E03E6426D293120051F70A /* DataProvider.swift */; };
 		B0E03E6726D2A2A10051F70A /* APIHeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E03E6626D2A2A10051F70A /* APIHeaders.swift */; };
 		B0E03E6A26D2AB4E0051F70A /* ErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E03E6926D2AB4E0051F70A /* ErrorHandling.swift */; };
-		B0E03E6C26D2E8E80051F70A /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E03E6B26D2E8E80051F70A /* UIViewController+Extensions.swift */; };
 		B0E03E6E26D2EF260051F70A /* RiverListSceneContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E03E6D26D2EF260051F70A /* RiverListSceneContract.swift */; };
 		B0E03E7026D2F0A20051F70A /* RiverListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E03E6F26D2F0A20051F70A /* RiverListCoordinator.swift */; };
 		B0E03E7226D2F5300051F70A /* RiverListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E03E7126D2F5300051F70A /* RiverListViewModel.swift */; };
 		B0E03E7426D2FA970051F70A /* RiverListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E03E7326D2FA970051F70A /* RiverListDataSource.swift */; };
+		B0E03E7826D386840051F70A /* RiverCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E03E7626D386840051F70A /* RiverCell.swift */; };
+		B0E03E7926D386840051F70A /* RiverCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0E03E7726D386840051F70A /* RiverCell.xib */; };
+		B0E03E7B26D3949B0051F70A /* UITableViewCell+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E03E7A26D3949B0051F70A /* UITableViewCell+Extensions.swift */; };
+		B0E03E7D26D3951F0051F70A /* RiverCellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E03E7C26D3951F0051F70A /* RiverCellBuilder.swift */; };
+		B0E03E8026D3B64A0051F70A /* MBProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = B0E03E7F26D3B64A0051F70A /* MBProgressHUD */; };
+		B0E03E8326D3B7040051F70A /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = B0E03E8226D3B7040051F70A /* SDWebImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B012776426D4EBEE00DE6898 /* ErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorModel.swift; sourceTree = "<group>"; };
 		B0E03E4426D27C110051F70A /* mitte aufgabe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mitte aufgabe.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0E03E4726D27C110051F70A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B0E03E4926D27C110051F70A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,11 +46,14 @@
 		B0E03E6426D293120051F70A /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 		B0E03E6626D2A2A10051F70A /* APIHeaders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHeaders.swift; sourceTree = "<group>"; };
 		B0E03E6926D2AB4E0051F70A /* ErrorHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandling.swift; sourceTree = "<group>"; };
-		B0E03E6B26D2E8E80051F70A /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		B0E03E6D26D2EF260051F70A /* RiverListSceneContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiverListSceneContract.swift; sourceTree = "<group>"; };
 		B0E03E6F26D2F0A20051F70A /* RiverListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiverListCoordinator.swift; sourceTree = "<group>"; };
 		B0E03E7126D2F5300051F70A /* RiverListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiverListViewModel.swift; sourceTree = "<group>"; };
 		B0E03E7326D2FA970051F70A /* RiverListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiverListDataSource.swift; sourceTree = "<group>"; };
+		B0E03E7626D386840051F70A /* RiverCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiverCell.swift; sourceTree = "<group>"; };
+		B0E03E7726D386840051F70A /* RiverCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RiverCell.xib; sourceTree = "<group>"; };
+		B0E03E7A26D3949B0051F70A /* UITableViewCell+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extensions.swift"; sourceTree = "<group>"; };
+		B0E03E7C26D3951F0051F70A /* RiverCellBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiverCellBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +61,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0E03E8326D3B7040051F70A /* SDWebImage in Frameworks */,
+				B0E03E8026D3B64A0051F70A /* MBProgressHUD in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +104,7 @@
 		B0E03E5B26D28BE00051F70A /* RiverListScene */ = {
 			isa = PBXGroup;
 			children = (
+				B0E03E7526D386310051F70A /* RiverCell */,
 				B0E03E4B26D27C110051F70A /* RiverListViewController.swift */,
 				B0E03E7326D2FA970051F70A /* RiverListDataSource.swift */,
 				B0E03E7126D2F5300051F70A /* RiverListViewModel.swift */,
@@ -115,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				B0E03E5E26D28E7C0051F70A /* RiverModel.swift */,
+				B012776426D4EBEE00DE6898 /* ErrorModel.swift */,
 				B0E03E6026D2901D0051F70A /* RiverLengthModel.swift */,
 			);
 			path = Models;
@@ -124,9 +138,19 @@
 			isa = PBXGroup;
 			children = (
 				B0E03E6926D2AB4E0051F70A /* ErrorHandling.swift */,
-				B0E03E6B26D2E8E80051F70A /* UIViewController+Extensions.swift */,
+				B0E03E7A26D3949B0051F70A /* UITableViewCell+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B0E03E7526D386310051F70A /* RiverCell */ = {
+			isa = PBXGroup;
+			children = (
+				B0E03E7726D386840051F70A /* RiverCell.xib */,
+				B0E03E7626D386840051F70A /* RiverCell.swift */,
+				B0E03E7C26D3951F0051F70A /* RiverCellBuilder.swift */,
+			);
+			path = RiverCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,6 +169,10 @@
 			dependencies = (
 			);
 			name = "mitte aufgabe";
+			packageProductDependencies = (
+				B0E03E7F26D3B64A0051F70A /* MBProgressHUD */,
+				B0E03E8226D3B7040051F70A /* SDWebImage */,
+			);
 			productName = "mitte aufgabe";
 			productReference = B0E03E4426D27C110051F70A /* mitte aufgabe.app */;
 			productType = "com.apple.product-type.application";
@@ -172,6 +200,10 @@
 				Base,
 			);
 			mainGroup = B0E03E3B26D27C110051F70A;
+			packageReferences = (
+				B0E03E7E26D3B64A0051F70A /* XCRemoteSwiftPackageReference "MBProgressHUD" */,
+				B0E03E8126D3B7040051F70A /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = B0E03E4526D27C110051F70A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -188,6 +220,7 @@
 			files = (
 				B0E03E5426D27C130051F70A /* LaunchScreen.storyboard in Resources */,
 				B0E03E5126D27C130051F70A /* Assets.xcassets in Resources */,
+				B0E03E7926D386840051F70A /* RiverCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,12 +231,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B012776526D4EBEE00DE6898 /* ErrorModel.swift in Sources */,
 				B0E03E6A26D2AB4E0051F70A /* ErrorHandling.swift in Sources */,
+				B0E03E7D26D3951F0051F70A /* RiverCellBuilder.swift in Sources */,
 				B0E03E7226D2F5300051F70A /* RiverListViewModel.swift in Sources */,
 				B0E03E6326D290A90051F70A /* APIManager.swift in Sources */,
 				B0E03E6E26D2EF260051F70A /* RiverListSceneContract.swift in Sources */,
-				B0E03E6C26D2E8E80051F70A /* UIViewController+Extensions.swift in Sources */,
 				B0E03E6726D2A2A10051F70A /* APIHeaders.swift in Sources */,
+				B0E03E7826D386840051F70A /* RiverCell.swift in Sources */,
 				B0E03E7026D2F0A20051F70A /* RiverListCoordinator.swift in Sources */,
 				B0E03E7426D2FA970051F70A /* RiverListDataSource.swift in Sources */,
 				B0E03E5F26D28E7C0051F70A /* RiverModel.swift in Sources */,
@@ -211,6 +246,7 @@
 				B0E03E4C26D27C110051F70A /* RiverListViewController.swift in Sources */,
 				B0E03E4826D27C110051F70A /* AppDelegate.swift in Sources */,
 				B0E03E6526D293120051F70A /* DataProvider.swift in Sources */,
+				B0E03E7B26D3949B0051F70A /* UITableViewCell+Extensions.swift in Sources */,
 				B0E03E4A26D27C110051F70A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -405,6 +441,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B0E03E7E26D3B64A0051F70A /* XCRemoteSwiftPackageReference "MBProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jdg/MBProgressHUD.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
+		B0E03E8126D3B7040051F70A /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.11.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B0E03E7F26D3B64A0051F70A /* MBProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B0E03E7E26D3B64A0051F70A /* XCRemoteSwiftPackageReference "MBProgressHUD" */;
+			productName = MBProgressHUD;
+		};
+		B0E03E8226D3B7040051F70A /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B0E03E8126D3B7040051F70A /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B0E03E3C26D27C110051F70A /* Project object */;
 }

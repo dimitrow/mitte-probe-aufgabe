@@ -17,26 +17,46 @@ class DataProvider: APIHeader {
         
         let urlSession = URLSession.shared.dataTask(with: urlRequest) { receivedData, urlResponse, error in
             
-            if let error = error {
-                
-                completion(.failure(error))
-            }
-            
-            guard let data = receivedData else {
-                
-                completion(.failure(NetworkError.customDescriptionError("No data received")))
-                return
-            }
-            
             let jsonDecoder = JSONDecoder()
             
-            guard let decoded = try? jsonDecoder.decode([T].self, from: data) else {
+            if let httpResponse = urlResponse as? HTTPURLResponse {
                 
-                completion(.failure(NetworkError.customDescriptionError("Decoding Error")))
-                return
+                guard let data = receivedData else {
+                    
+                    completion(.failure(NetworkError.missedData))
+                    return
+                }
+                
+                if let error = error {
+                    
+                    completion(.failure(error))
+                }
+                
+                switch httpResponse.statusCode {
+                case 500:
+                    
+                    guard let decoded = try? jsonDecoder.decode(ErrorModel.self, from: data) else {
+                        
+                        completion(.failure(NetworkError.decodingError))
+                        return
+                    }
+                    print(decoded.message)
+                    completion(.failure(NetworkError.customDescriptionError(decoded.message)))
+                    break
+                case 200:
+                    
+                    guard let decoded = try? jsonDecoder.decode([T].self, from: data) else {
+                        
+                        completion(.failure(NetworkError.decodingError))
+                        return
+                    }
+                    completion(.success(decoded))
+                    break
+                default:
+                    
+                    break
+                }
             }
-
-            completion(.success(decoded))
         }
         
         urlSession.resume()

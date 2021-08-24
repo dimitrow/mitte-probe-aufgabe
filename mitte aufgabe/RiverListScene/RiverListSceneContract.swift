@@ -20,7 +20,8 @@ protocol RiverListViewDelegate: AnyObject {
 
 protocol RiverListViewModelProtocol: AnyObject {
     
-    var riverList: [RiverModel] { get set }
+    var riverListModel: RiverListModel { get set }
     
     func fetchRivers()
+    func filterApply(_ filter: MeasureUnit)
 }

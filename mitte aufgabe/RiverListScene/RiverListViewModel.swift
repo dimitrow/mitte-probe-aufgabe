@@ -7,16 +7,23 @@
 
 import UIKit
 
-class RiverListViewModel: RiverListViewModelProtocol {
+struct RiverListModel {
     
-    weak var view: RiverListViewDelegate?
     var riverList: [RiverModel] = []
+    var choosenFilter: MeasureUnit = .kilometers
+}
+
+class RiverListViewModel: RiverListViewModelProtocol {
+        
+    weak var view: RiverListViewDelegate?
+    var riverListModel: RiverListModel
     
     private let dataProvider = DataProvider()
     
     init(view: RiverListViewDelegate) {
         
         self.view = view
+        riverListModel = RiverListModel()
     }
     
     func fetchRivers() {
@@ -31,7 +38,7 @@ class RiverListViewModel: RiverListViewModelProtocol {
             
             switch result {
             case .success(let rivers):
-                self?.riverList = rivers
+                self?.riverListModel.riverList = rivers
                 self?.view?.updateContent()
                 break
             case .failure(let error):
@@ -39,6 +46,12 @@ class RiverListViewModel: RiverListViewModelProtocol {
                 break
             }
         }
+    }
+    
+    func filterApply(_ filter: MeasureUnit) {
+        
+        self.riverListModel.choosenFilter = filter
+        self.view?.updateContent()
     }
 }
 

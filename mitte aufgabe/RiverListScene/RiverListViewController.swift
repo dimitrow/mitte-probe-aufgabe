@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import MBProgressHUD
 
 class RiverListViewController: UIViewController {
 
@@ -23,7 +24,7 @@ class RiverListViewController: UIViewController {
         let tableView = UITableView(frame: .zero, style: .plain)
         tableView.tableFooterView = UIView()
         tableView.rowHeight = UITableView.automaticDimension
-                
+        tableView.register(UINib.init(nibName: RiverCell.identifier, bundle: nil), forCellReuseIdentifier: RiverCell.identifier)
         return tableView
     }()
     
@@ -40,6 +41,8 @@ class RiverListViewController: UIViewController {
         
         self.view.backgroundColor = .white
         
+        MBProgressHUD.showAdded(to: self.view, animated: true)
+        viewModel?.fetchRivers()
     }
     
     override func viewWillLayoutSubviews() {
@@ -47,7 +50,6 @@ class RiverListViewController: UIViewController {
         
         self.pinSegmentedControl()
         self.pinTableView()
-        
     }
     
     //MARK: - UISetup
@@ -71,8 +73,17 @@ class RiverListViewController: UIViewController {
     }
     
     @objc func handleUnitSelection(_ sender: UISegmentedControl) {
-        
-        print(sender.selectedSegmentIndex)
+                
+        switch sender.selectedSegmentIndex {
+        case 0:
+            viewModel?.filterApply(.kilometers)
+            break
+        case 1:
+            viewModel?.filterApply(.miles)
+            break
+        default:
+            break
+        }
     }
 }
 
@@ -80,9 +91,38 @@ extension RiverListViewController: RiverListViewDelegate {
     
     func updateContent() {
         
+        DispatchQueue.main.async { [weak self] in
+            
+            self?.riversTableView.reloadData()
+            
+            if let view = self?.view {
+                
+                MBProgressHUD.hide(for: view, animated: true)
+            }
+        }
     }
     
     func operationfailed(_ error: Error) {
         
+        DispatchQueue.main.async { [weak self] in
+            self?.showAlert(error.localizedDescription)
+                 
+            if let view = self?.view {
+                
+                MBProgressHUD.hide(for: view, animated: true)
+            }
+        }
+    }
+    
+    private func showAlert(_ message: String) {
+        
+        let alertController = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        let retryAction = UIAlertAction(title: "Retry", style: .default) { [weak self] _ in
+            
+            self?.viewModel?.fetchRivers()
+        }
+        
+        alertController.addAction(retryAction)
+        present(alertController, animated: true)
     }
 }

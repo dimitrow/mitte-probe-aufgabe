@@ -13,5 +13,4 @@ struct RiverListAPI {
 
         return URL(string: "https://242s93wci8.execute-api.eu-west-1.amazonaws.com/mobile_developer_challenge")
     }
-    
 }

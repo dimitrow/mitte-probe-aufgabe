@@ -13,9 +13,11 @@ struct RiverModel: Decodable {
         case name
         case imageURL = "image"
         case length
+        case message
     }
     
     let name: String
     let imageURL: String
     let length: RiverLengthModel
+    var message: String?
 }
